@@ -10,7 +10,7 @@
 }
 
 html {
-    font-size: 62.5;
+    font-size: 62.5%;
 }
 
 :root {
@@ -36,16 +36,17 @@ html {
     );
 
     /* ! fonts */
-    --text-1: normal bolder "Plus Jakarta" 5.6rem, 120%;
-    --text-2: normal bolder "Plus Jakarta" 4rem, 120%;
-    --text-3: normal bolder "Plus Jakarta" 3.2rem, 120%;
-    --text-4: normal bolder "Plus Jakarta" 2.4rem, 120%;
-    --text-5: normal 500 "Plus Jakarta" 1.8rem, 150%;
-    --text-6: normal bold "Plus Jakarta" 1.6rem, 150%;
-    --text-7: normal bold "Plus Jakarta" 1.8rem, 150%;
+    --text-1: bolder 5.6rem "Plus Jakarta Sans";
+    --text-2: normal bolder "Plus Jakarta Sans" 4rem, 120%;
+    --text-3: normal bolder "Plus Jakarta Sans" 3.2rem, 120%;
+    --text-4: normal bolder "Plus Jakarta Sans" 2.4rem, 120%;
+    --text-5: 400 1.8rem "Plus Jakarta Sans";
+    --text-6: normal bold "Plus Jakarta Sans" 1.6rem, 150%;
+    --text-7: bold 1.8rem "Plus Jakarta Sans";
 }
 
 /* ! common classes */
+/* ! layout */
 
 .flex-r-container {
     display: flex;
@@ -71,4 +72,67 @@ html {
 .full-center {
     align-items: center;
     justify-content: center;
+}
+
+/* ! common classes */
+/* ! elements */
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 28px;
+    border: none;
+    color: white;
+    font: var(--text-7);
+    line-height: 150%;
+    width: 170px;
+    height: 60px;
+}
+
+
+/* ! hero section */
+
+.navbar {
+    padding: 16px 20px;
+    justify-content: space-between;
+}
+
+.nav-btn {
+    background-color: var(--blue-900);
+}
+
+
+
+.hero {
+    min-height: 100vh;
+    padding: 64px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 48px;
+}
+
+.text-section {
+    gap: 24px;
+}
+
+.text-section h1 {
+    font: var(--text-1);
+    font-size: 4rem;
+    line-height: 150%;
+    font-weight: 700;
+}
+
+.text-section p {
+    color: var(--grey);
+    font: var(--text-5);
+    line-height: 150%;
+}
+
+.hero-btn {
+    background: var(--gradient-pink);
+    margin-top: 16px;
+}
+
+.hero .img-section {
+    background: url("assets/image-hero-mobile.png") center no-repeat;
+    background-size: cover;
 }
