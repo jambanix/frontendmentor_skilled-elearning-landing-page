@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5;
+}
+
+:root {
+
+    /*!  base colours */
+    --blue-900: #13183f;
+    --blue-600: #666ca3;
+    --pink-600: #f74780;
+    --pink-300: #ffa7c3;
+    --grey: #83869a;
+    --white: #ffffff;
+
+    /*! gradients  */
+    --gradient-pink: linear-gradient(
+        to top,
+        #f02aa6,
+        #ff6f48
+    );
+    --gradient-purple: linear-gradient(
+        to bottom,
+        #4851ff,
+        #f02aa6
+    );
+
+    /* ! fonts */
+    --text-1: normal bolder "Plus Jakarta" 5.6rem, 120%;
+    --text-2: normal bolder "Plus Jakarta" 4rem, 120%;
+    --text-3: normal bolder "Plus Jakarta" 3.2rem, 120%;
+    --text-4: normal bolder "Plus Jakarta" 2.4rem, 120%;
+    --text-5: normal 500 "Plus Jakarta" 1.8rem, 150%;
+    --text-6: normal bold "Plus Jakarta" 1.6rem, 150%;
+    --text-7: normal bold "Plus Jakarta" 1.8rem, 150%;
+}
+
+/* ! common classes */
+
+.flex-r-container {
+    display: flex;
+}
+
+.flex-c-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.jusitfy-center {
+    justify-content: center;
+}
+
+.full-center {
+    align-items: center;
+    justify-content: center;
+}
