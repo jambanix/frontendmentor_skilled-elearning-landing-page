@@ -38,8 +38,8 @@ html {
     /* ! fonts */
     --text-1: bolder 5.6rem "Plus Jakarta Sans";
     --text-2: normal bolder "Plus Jakarta Sans" 4rem, 120%;
-    --text-3: normal bolder "Plus Jakarta Sans" 3.2rem, 120%;
-    --text-4: normal bolder "Plus Jakarta Sans" 2.4rem, 120%;
+    --text-3: bold 3.2rem "Plus Jakarta Sans";
+    --text-4: bold 2.4rem "Plus Jakarta Sans";
     --text-5: 400 1.8rem "Plus Jakarta Sans";
     --text-6: normal bold "Plus Jakarta Sans" 1.6rem, 150%;
     --text-7: bold 1.8rem "Plus Jakarta Sans";
@@ -135,4 +135,83 @@ html {
 .hero .img-section {
     background: url("assets/image-hero-mobile.png") center no-repeat;
     background-size: cover;
+}
+
+/*! Courses section */
+
+.courses {
+    padding: 64px 20px;
+}
+
+.card-container {
+    gap:55px;
+}
+
+.card-head {
+    padding: 32px;
+    background: var(--gradient-pink);
+    color: white;
+    font: var(--text-3);
+    font-size: 1.6rem !important;
+    line-height: 175%;
+    font-weight: 300;
+    border-radius: 15px;
+}
+
+.card {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 64px;
+    padding-bottom: 40px;
+    position: relative;
+    box-shadow: .1rem .1rem 10rem rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    position: absolute;
+    top: -32px;
+    left: 16px;
+
+}
+
+.card-content {
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.card h3 {
+    font: var(--text-4);
+    color: var(--blue-900);
+}
+
+.card p {
+    font-size: 1.6rem;
+    color: var(--grey);
+    line-height: 150%;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+}
+
+.card .get-started {
+    color: var(--pink-600);
+    font: var(--text-7);
+}
+
+/*! Footer  */
+
+footer {
+    background-color: var(--blue-900);
+    padding: 24px 20px;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 80px;
+    height: 20px;
+}
+
+footer button {
+    height: 150px;
+    width: 48px;
+    background: var(--gradient-purple);
 }
