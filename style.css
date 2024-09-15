@@ -13,6 +13,7 @@ html {
     font-size: 62.5%;
 }
 
+
 :root {
 
     /*!  base colours */
@@ -86,6 +87,13 @@ html {
     line-height: 150%;
     width: 170px;
     height: 60px;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background-color: var(--blue-600);
 }
 
 
@@ -94,6 +102,7 @@ html {
 .navbar {
     padding: 16px 20px;
     justify-content: space-between;
+    width: 100%;
 }
 
 .nav-btn {
@@ -102,18 +111,17 @@ html {
 
 
 
-.hero {
-    height: 100vh;
-    padding: 64px 20px;
+.hero-container {
+    height: 120vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 48px;
-    overflow-x: hidden;
     position: relative;
 }
 
 .text-section {
     gap: 24px;
+    padding: 56px 20px;
 }
 
 .text-section h1 {
@@ -129,12 +137,18 @@ html {
     line-height: 150%;
 }
 
-.hero-btn {
+.hero-container .btn {
     background: var(--gradient-pink);
     margin-top: 16px;
 }
 
-.hero .img-section {
+.hero-container .btn:hover,
+.hero-container .btn:focus,
+.hero-container .btn:active {
+    background-color: var(--blue-600);
+}
+
+.hero-container .img-section {
     background: url("assets/image-hero-mobile.png") center no-repeat;
     background-size: cover;
 }
@@ -222,6 +236,12 @@ footer button {
     background: var(--gradient-purple);
 }
 
+footer button:hover,
+footer button:active,
+footer button:focus {
+    background-color: var(--pink-300);
+}
+
 /* ! Responsiveness */
 
 @media (min-width: 493px) {
@@ -233,7 +253,7 @@ footer button {
         font-size: 2rem;
     }
 
-    .hero .img-section {
+    .hero-container .img-section {
         background: url("assets/image-hero-mobile@2x.png") center no-repeat;
         background-size: contain;
     }
@@ -251,32 +271,64 @@ footer button {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 583px) {
+    .navbar {
+        padding: 24px 32px;
+    }
+
+    .hero-container .text-section {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .text-section h1 {
+        font-size: 5.2rem;
+    }
+
+    .text-section p {
+        font-size: 2.4rem;
+    }
+
+    footer {
+        padding: 24px 32px;
+    }
+
+
+}
+
+@media (min-width: 832px) {
 
     .navbar {
         padding: 24px 44px;
     }
 
-    .hero {
-        grid-template-columns:400px 1fr;
+    .navbar button {
+        z-index: 100;
+        box-shadow: 1rem 1rem 10rem rgba(255,255,255,0.7);
+    }
+
+    .hero-container {
+        grid-template-columns:500px 1fr;
         grid-template-rows: 1fr;
         height: 550px;
+    }
+
+    .hero-container .text-section {
         padding: 64px 44px;
     }
 
-    .hero .img-section {
+    .hero-container .img-section {
         background: none;
         position: relative;
     }
 
-    .hero .tablet-desktop-img {
+    .hero-container .tablet-desktop-img {
         display: block;
         position: absolute;
-        top: -120px;
+        top: -140px;
         right: -260px;
         height: auto;
         object-fit: contain;
-        z-index: 10;
         max-width: 650px;
     }
 
@@ -297,5 +349,56 @@ footer button {
 
     footer {
         padding: 24px 44px;
+    }
+}
+
+@media (min-width: 1080px) {
+
+    section {
+        max-width: min(100vw, 1440px);
+        margin-inline: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        grid-template-columns:500px 1fr;
+    }
+
+    .text-section h1 {
+        font-size: 5.6rem;
+    }
+
+    .navbar {
+        max-width: 1440px;
+        margin-inline: auto;
+    }
+
+    .hero-container {
+        height: 800px;
+        z-index: 10;
+    }
+
+    .hero-container .tablet-desktop-img {
+        display: block;
+        position: absolute;
+        top: -300px;
+        right: -500px;
+        object-fit: contain;
+        max-width: 1100px;
+    }
+
+    .courses {
+        margin-inline: auto;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    footer {
+        padding-left: 44px;
+        padding-right: 44px;
     }
 }
