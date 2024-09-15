@@ -195,6 +195,8 @@ main {
     padding-bottom: 40px;
     position: relative;
     box-shadow: .1rem .1rem 10rem rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 12px;
 }
 
 .card-icon {
