@@ -138,6 +138,7 @@ main {
     font-size: 4rem;
     line-height: 150%;
     font-weight: 700;
+    color: var(--blue-900);
 }
 
 .text-section p {
