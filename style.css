@@ -14,6 +14,7 @@ html {
 }
 
 
+
 :root {
 
     /*!  base colours */
@@ -73,6 +74,14 @@ html {
 .full-center {
     align-items: center;
     justify-content: center;
+}
+
+main {
+    background: linear-gradient(
+        to bottom,
+        white,
+        rgba(102, 108, 163, 0.15)
+    );
 }
 
 /* ! common classes */
@@ -161,11 +170,6 @@ html {
 
 .courses {
     padding: 64px 20px;
-    background: linear-gradient(
-        to bottom,
-        white,
-        rgba(102, 108, 163, 0.1)
-    );
 }
 
 .card-container {
