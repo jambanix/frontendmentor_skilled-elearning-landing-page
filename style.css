@@ -103,11 +103,13 @@ html {
 
 
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     padding: 64px 20px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 48px;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .text-section {
@@ -250,26 +252,50 @@ footer button {
 }
 
 @media (min-width: 768px) {
+
+    .navbar {
+        padding: 24px 44px;
+    }
+
     .hero {
-        grid-template-columns:328px 1fr;
+        grid-template-columns:400px 1fr;
         grid-template-rows: 1fr;
-        height: 528px;
+        height: 550px;
+        padding: 64px 44px;
     }
 
     .hero .img-section {
         background: none;
         position: relative;
-        align-items: flex-start;
-        justify-content: flex-start;
     }
 
     .hero .tablet-desktop-img {
         display: block;
         position: absolute;
-        left: 0;
-        top: -30%;
-        height: 100%;
+        top: -120px;
+        right: -260px;
+        height: auto;
+        object-fit: contain;
+        z-index: 10;
+        max-width: 650px;
     }
 
-    
+    .courses {
+        padding: 64px 44px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 350px);
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+
+    .card-head {
+        padding: 48px;
+    }
+
+    footer {
+        padding: 24px 44px;
+    }
 }
