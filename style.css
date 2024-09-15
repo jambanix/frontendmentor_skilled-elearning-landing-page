@@ -372,9 +372,10 @@ footer button:focus {
     }
 
     .hero-container {
-        grid-template-columns:600px 1fr;
+        grid-template-columns:650px 1fr;
     }
 
+  
     .text-section h1 {
         font-size: 5.6rem;
     }
